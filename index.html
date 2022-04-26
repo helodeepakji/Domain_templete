@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous" />
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Ubuntu:wght@300&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .maincont {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .maincont .intropart {
+            width: 100%;
+            font-family: 'Ubuntu', sans-serif;
+            padding: 30px;
+        }
+
+        .maincont .intropart h1 {
+            font-size: 5vw;
+            color: #aa00f7;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .maincont .imgpart {
+            width: 100%;
+            display: flex;
+        }
+
+        .imgpart .lcol {
+            width: 100%;
+            margin: 20px;
+            margin-top: 40px;
+        }
+
+        .imgpart .rcol {
+            width: 100%;
+            margin: 20px;
+        }
+
+        .imgpart .lcol img,
+        .imgpart .rcol img {
+            width: 100%;
+            margin-bottom: 10px;
+            background: #e7e7e7;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .searchbtnarea {
+            display: grid;
+        }
+        
+        .regfreeweb,
+        .getdomain{
+            margin: 10px;
+        }
+
+        .regfreeweb .input-group,
+        .getdomain .input-group {
+            width: 100%;
+            font-family: 'Nunito', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .regfreeweb .input-group input,
+        .getdomain .input-group input {
+            width: 0%;
+            height: 60px;
+            border: none;
+            outline: none;
+            border-bottom-right-radius: 30px;
+            border-top-right-radius: 30px;
+            transition: all 255ms ease-in-out;
+            opacity: 0;
+            font-size: 1.4rem;
+            color: rgb(135, 66, 255);
+        }
+
+        .regfreeweb .input-group input::placeholder,
+        .getdomain .input-group input::placeholder {
+            color: #aa00f7;
+        }
+
+        .regfreeweb .input-group button,
+        .getdomain .input-group button {
+            /* height: 40px; */
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 10px;
+            background-color: #aa00f7;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            color: white;
+            cursor: pointer;
+            transition: all 255ms ease-in-out;
+        }
+
+        .getdomain .input-group button.active {
+            border-radius: unset;
+            border-bottom-left-radius: 30px;
+            border-top-left-radius: 30px;
+            height: 50px;
+            font-size: 10px;
+        }
+
+        .getdomain .input-group input.active {
+            width: 50%;
+            background-color: #e7e7e7;
+            opacity: 1;
+            height: 50px;
+        }
+
+        .regfreeweb .input-group button.active {
+            border-radius: unset;
+            border-bottom-left-radius: 30px;
+            border-top-left-radius: 30px;
+            height: 50px;
+            font-size: 10px;
+        }
+
+        .regfreeweb .input-group input.active {
+            width: 50%;
+            background-color: #e7e7e7;
+            opacity: 1;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <i class="fas fa-search"></i> -->
+    <div class="maincont">
+        <div class="intropart">
+            <h1>Build the website you want</h1>
+            <div class="searchbtnarea">
+                <div class="getdomain">
+                    <div class="input-group style-1">
+                        <button>Get the domain</button>
+                        <input type="text" placeholder="Get the domain">
+                    </div>
+                </div>
+                <div class="regfreeweb">
+                    <div class="input-group style-2">
+                        <button>Register a free website</button>
+                        <input type="text" placeholder="type a subdomain name">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="imgpart">
+            <div class="lcol">
+                <img src="image/site1.jpg" alt="">
+                <img src="image/site2.jpg" alt="">
+                <img src="image/site3.jpg" alt="">
+            </div>
+            <div class="rcol">
+                <img src="image/site4.jpg" alt="">
+                <img src="image/site5.jpg" alt="">
+                <img src="image/site6.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const buttonOne = document.querySelector(".getdomain .input-group.style-1 button");
+    const inputOne = document.querySelector(".getdomain .input-group.style-1 input");
+    // var searchbtn1 = document.getElementById("srh1");
+    
+
+    buttonOne.addEventListener("click", () => {
+        inputOne.classList.toggle("active");
+        buttonOne.classList.toggle("active");
+        // searchbtn1.classList.add("disblock");
+    });
+
+
+    const buttontwo = document.querySelector(".regfreeweb .input-group.style-2 button");
+    const inputtwo = document.querySelector(".regfreeweb .input-group.style-2 input");
+    // var searchbtn2 = document.getElementById("srh2");
+
+    buttontwo.addEventListener("click", () => {
+        inputtwo.classList.toggle("active");
+        buttontwo.classList.toggle("active");
+        // searchbtn2.classList.add("disblock");
+    });
+
+</script>
+
+</html>
